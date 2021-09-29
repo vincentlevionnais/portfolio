@@ -1,7 +1,6 @@
 <?php
 
-require '../app/Controllers/MainController.php';
-require '../app/Controllers/ErrorController.php';
+use portfolio\Controllers\MainController;
 
 require '../vendor/autoload.php';
 
@@ -21,7 +20,7 @@ $router->map(
     'GET',
     // La route (motif de l'URL)
     '/',
-    // La destination
+    // La destination (en simplifié : 'MainController::home')
     [
         'method' => 'home',
         'controller' => 'MainController',
@@ -30,19 +29,36 @@ $router->map(
     'main-home'
 );
 
-// Notre route pour la home
+// Notre route pour la page contact
 $router->map(
     'GET',
     '/contact',
-    [
-        'method' => 'contact',
-        'controller' => 'MainController',
-    ],
+    'MainController::contact',
     'main-contact'
+);
+
+// Notre route pour la page skill
+$router->map(
+    'GET',
+    '/skills',
+    'MainController::skills',
+    'main-skills'
+);
+
+// Notre route dynamique pour les pages
+$router->map(
+    'GET',
+    '/page/[i:id]',
+    'MainController::page',
+    'main-page'
 );
 
 $match = $router->match();
 
-$dispatcher = new Dispatcher($match, 'ErrorController::err404');
+$dispatcher = new Dispatcher($match, 'portfolio\Controllers\ErrorController::err404');
+
+// Méthode pour simplifier l'écriture des routes des controllers :
+// https://packagist.org/packages/benoclock/alto-dispatcher
+$dispatcher->setControllersNamespace('portfolio\Controllers');
 
 $dispatcher->dispatch();
