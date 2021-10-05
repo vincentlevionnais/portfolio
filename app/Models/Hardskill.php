@@ -5,8 +5,8 @@ namespace portfolio\Models;
 use portfolio\Utils\Database;
 use PDO;
 
-class Hardskill {
-
+class Hardskill
+{
     private $id;
     private $name;
     private $picture;
@@ -14,35 +14,58 @@ class Hardskill {
 
     public static function find($id)
     {
+        $pdo = Database::getPDO();
 
+        $sql = '
+            SELECT * FROM `hardskill`
+            WHERE `id` = ' . $id;;
+        $pdostatement = $pdo->query($sql);
+        $hardskill = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $hardskill;
     }
 
     public static function findAll()
     {
         $pdo = Database::getPDO();
 
-        $sql = "
+        $sql = '
             SELECT * FROM `hardskill`
-        ";
+        ';
         $pdostatement = $pdo->query($sql);
-        $results = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
-        return $results;
+        $hardskills = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $hardskills;
     }
 
-    public static function insert()
+
+    /**
+     * Get the value of id
+     */
+    public function getId()
     {
-
+        return $this->id;
     }
 
-    public static function update()
+    /**
+     * Get the value of name
+     */
+    public function getName()
     {
-
+        return $this->name;
     }
 
-    public static function delete()
+    /**
+     * Get the value of picture
+     */
+    public function getPicture()
     {
-
+        return $this->picture;
     }
 
-
+    /**
+     * Get the value of alternativetext
+     */
+    public function getAlternativetext()
+    {
+        return $this->alternativetext;
+    }
 }

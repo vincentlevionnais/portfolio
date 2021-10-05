@@ -1,7 +1,5 @@
 <?php
 
-use portfolio\Controllers\MainController;
-
 require '../vendor/autoload.php';
 
 $router = new AltoRouter();

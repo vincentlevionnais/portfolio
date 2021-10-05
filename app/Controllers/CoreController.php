@@ -4,13 +4,18 @@ namespace portfolio\Controllers;
 
 abstract class CoreController
 {
-    protected function show($view, $data = [])
+    protected function show($viewName, $viewVars = [])
     {
-        extract($data);
+        global $router;
 
-        require __DIR__ .'/../views/layout/header.tpl.php';
-        require __DIR__ .'/../views/'. $view .'.tpl.php';
-        require __DIR__ .'/../views/layout/footer.tpl.php';
+        $viewVars['currentPage'] = $viewName;
+        $viewVars['assetsBaseUri'] = $_SERVER['BASE_URI'] . 'assets/';
+        $viewVars['baseUri'] = $_SERVER['BASE_URI'];
+        
+        extract($viewVars);
+
+        require __DIR__ . '/../views/layout/header.tpl.php';
+        require __DIR__ . '/../views/' . $viewName . '.tpl.php';
+        require __DIR__ . '/../views/layout/footer.tpl.php';
     }
-
 }

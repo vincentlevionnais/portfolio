@@ -1,42 +1,41 @@
 <?php
 
 namespace portfolio\Controllers;
+
 use portfolio\Models\Hardskill;
-use portfolio\Models\Tryskill;
+use portfolio\Models\Softskill;
 
 class MainController extends CoreController
 {
     public function home()
     {
-        echo "je suis dans la méthode home";
 
+
+        $this->show('main/home');
+        
     }
 
     public function contact()
     {
-        echo "je suis dans la méthode contact";
+        $this->show('main/contact');
+
     }
 
     public function skills()
     {
-        echo "je suis dans la méthode skill";
-
         $hardskills = Hardskill::findAll();
-        $tryskills = Tryskill::findAll();
+        $softskills = Softskill::findAll();
 
-        $data = [
+        $viewVars = [
             'hardskills' => $hardskills,
-            'tryskills' => $tryskills
+            'softskills' => $softskills
         ];
 
-        $this->show('main/skills', $data);
-
+        $this->show('main/skills', $viewVars);
     }
 
     public function page($pageNumber)
     {
         echo "je suis dans la méthode page et j'ai reçu {$pageNumber}";
     }
-
-
 }
