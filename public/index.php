@@ -43,6 +43,14 @@ $router->map(
     'main-skills'
 );
 
+// Notre route pour la page description
+$router->map(
+    'GET',
+    '/descriptions',
+    'MainController::descriptions',
+    'main-descriptions'
+);
+
 // Notre route dynamique pour les pages
 $router->map(
     'GET',

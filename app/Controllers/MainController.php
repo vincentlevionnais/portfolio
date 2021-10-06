@@ -2,6 +2,7 @@
 
 namespace portfolio\Controllers;
 
+use portfolio\Models\Description;
 use portfolio\Models\Hardskill;
 use portfolio\Models\Softskill;
 
@@ -13,6 +14,18 @@ class MainController extends CoreController
 
         $this->show('main/home');
         
+    }
+
+    public function descriptions()
+    {
+        $descriptions = Description::findAll();
+
+        $viewVars = [
+             'descriptions' => $descriptions,
+        ];
+
+        $this->show('main/descriptions', $viewVars);
+
     }
 
     public function contact()
@@ -28,7 +41,7 @@ class MainController extends CoreController
 
         $viewVars = [
             'hardskills' => $hardskills,
-            'softskills' => $softskills
+            'softskills' => $softskills,
         ];
 
         $this->show('main/skills', $viewVars);

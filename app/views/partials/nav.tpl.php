@@ -14,7 +14,8 @@
 
 
         <ul class="menu">
-            <li><a href="">Qui suis-je</a></li>
+            <li><a href="<?= $router->generate('main-home'); ?>">Accueil</a></li>
+            <li><a href="<?= $router->generate('main-descriptions'); ?>">Qui suis-je</a></li>
             <li><a href="<?= $router->generate('main-skills'); ?>">Compétences</a></li>
             <li><a href="">Réalisations</a></li>
             <li><a href="<?= $router->generate('main-contact'); ?>">Contact</a></li>

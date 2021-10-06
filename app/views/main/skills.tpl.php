@@ -1,7 +1,6 @@
-<h1>Skills</h1>
+<h1>Compétences</h1>
 <div class = 'container'>
-
-    <div class="container-skills">
+    <div class="card">
         <h2>Compétences techniques</h2>
         <ul class="skills">
             <?php foreach ($hardskills as $hardskill) : ?>
@@ -13,7 +12,7 @@
         </ul>
     </div>
 
-    <div class="container-skills">
+    <div class="card">
         <h2>Qualités</h2>
         <ul class="skills">
             <?php foreach ($softskills as $softskill) : ?>
