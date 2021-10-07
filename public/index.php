@@ -38,7 +38,7 @@ $router->map(
 // Notre route pour la page skill
 $router->map(
     'GET',
-    '/skills',
+    '/competences',
     'MainController::skills',
     'main-skills'
 );
@@ -46,7 +46,7 @@ $router->map(
 // Notre route pour la page description
 $router->map(
     'GET',
-    '/descriptions',
+    '/qui-suis-je',
     'MainController::descriptions',
     'main-descriptions'
 );

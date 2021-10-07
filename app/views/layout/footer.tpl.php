@@ -1,14 +1,10 @@
         </main>
 
-        <footer id="footer">
-            <div>
-                <p>
-                    Vincent Levionnais - Copyright &copy 2021
-                </p>
+        <footer>
+            <div class="copyright">
+                <p><span>©</span> 2021 - Vincent LEVIONNAIS - Tous droits réservés.</p>
             </div>
         </footer>
-    </div>
 
 </body>
-
 </html>

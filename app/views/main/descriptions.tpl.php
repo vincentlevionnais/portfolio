@@ -1,9 +1,9 @@
 <h1>Qui suis-je ?</h1>
-<div class=container-description>
+<div class="container-description">
 
     <div class="container container-portrait">
         <div class="portrait">
-            <img src="./assets/pictures/identity/portrait-vincent-levionnais.jpg" alt="">
+            <img src="./assets/pictures/identity/portrait-vincent-levionnais.jpg" alt="Portrait photo de Vincent Levionnais">
         </div>
     </div>
 
