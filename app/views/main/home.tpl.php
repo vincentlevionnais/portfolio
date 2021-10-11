@@ -6,6 +6,8 @@
             Bonjour et bienvenue sur mon site portfolio.
             Je m'appelle Vincent Levionnais et je suis développeur web.
             <br><br>
+            J'ai réalisé ce site sans framework, depuis zéro.
+            <br><br>
             Bonne visite !
         </p>
     </div>

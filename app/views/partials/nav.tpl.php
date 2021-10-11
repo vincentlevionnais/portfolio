@@ -14,18 +14,18 @@
 
 
     <ul class="menu">
-        <li><a href="<?= $router->generate('main-home'); ?>">Accueil</a></li>
-        <li><a href="<?= $router->generate('main-descriptions'); ?>">Qui suis-je</a></li>
-        <li><a href="<?= $router->generate('main-skills'); ?>">Compétences</a></li>
-        <li><a href="">Réalisations</a></li>
-        <li><a href="<?= $router->generate('main-contact'); ?>">Contact</a></li>
+        <li class = "<?php if ($viewName=='main/home'){echo 'active';} ?>"><a href="<?= $router->generate('main-home'); ?>">Accueil</a></li>
+        <li class = "<?php if ($viewName=='main/descriptions'){echo 'active';} ?>"><a href="<?= $router->generate('main-descriptions'); ?>">Qui suis-je</a></li>
+        <li class = "<?php if ($viewName=='main/skills'){echo 'active';} ?>"><a href="<?= $router->generate('main-skills'); ?>">Compétences</a></li>
+        <li class = ""><a href="">Réalisations</a></li>
+        <li class = "<?php if ($viewName=='main/contact'){echo 'active';} ?>"><a href="<?= $router->generate('main-contact'); ?>">Contact</a></li>
     </ul>
 
     <div class="theme">
         <label class="switch">
-            <input type="checkbox">
+            <input type="checkbox" class="switch-theme">
             <span class="slider round"></span>
         </label>
-        <p>theme</p>
+        <p>thème</p>
     </div>
 </nav>
