@@ -3,6 +3,7 @@
 namespace portfolio\Controllers;
 
 use portfolio\Models\Description;
+use portfolio\Models\Project;
 use portfolio\Models\Hardskill;
 use portfolio\Models\Softskill;
 
@@ -28,12 +29,6 @@ class MainController extends CoreController
 
     }
 
-    public function contact()
-    {
-        $this->show('main/contact');
-
-    }
-
     public function skills()
     {
         $hardskills = Hardskill::findAll();
@@ -45,6 +40,24 @@ class MainController extends CoreController
         ];
 
         $this->show('main/skills', $viewVars);
+    }
+
+    public function projects()
+    {
+        $projects = Project::findAll();
+
+        $viewVars = [
+             'projects' => $projects,
+        ];
+
+        $this->show('main/projects', $viewVars);
+
+    }
+
+    public function contact()
+    {
+        $this->show('main/contact');
+
     }
 
     public function page($pageNumber)

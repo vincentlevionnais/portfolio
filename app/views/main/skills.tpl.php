@@ -5,7 +5,7 @@
         <ul class="skills">
             <?php foreach ($hardskills as $hardskill) : ?>
                 <li>
-                    <img class="skills-logo" src="<?= $hardskill->getPicture() ?>" alt="<?= $hardskill->getAlternativetext() ?>">
+                    <img class="skills-logo" src="./<?= $hardskill->getPicture() ?>" alt="<?= $hardskill->getAlternativetext() ?>">
                     <p><?= $hardskill->getName() ?></p>
                 </li>
             <?php endforeach ?>

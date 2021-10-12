@@ -51,6 +51,14 @@ $router->map(
     'main-descriptions'
 );
 
+// Notre route pour la page réalisation
+$router->map(
+    'GET',
+    '/realisations',
+    'MainController::projects',
+    'main-projects'
+);
+
 // Notre route dynamique pour les pages
 $router->map(
     'GET',

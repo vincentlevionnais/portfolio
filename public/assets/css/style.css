@@ -74,6 +74,16 @@ h2 {
     margin-bottom: 2rem;
 }
 
+a:link {
+    color: rgb(159, 225, 255);
+}
+
+a:visited {
+    color: rgb(125, 166, 255);
+}
+
+
+
 /*-----------------*/
 /*     NAVBAR      */
 /*-----------------*/
@@ -236,6 +246,27 @@ h2 {
     transition-duration: 0.5s;
 }
 
+.card-project {
+    min-width: auto;
+}
+
+.card-project span {
+    white-space: pre-line;
+}
+
+img.screenshot {
+    max-width:80vw ;
+    max-height: 350px;
+    display: block;
+    padding : 1.5rem 0 0.5rem 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.caption {
+    font-style: italic;
+}
+
 .card-skills {
     padding: 2rem 2rem 0 2rem;
 }
@@ -316,6 +347,7 @@ img.skills-logo {
     width: 2rem;
     padding-right: 0.5rem;
 }
+
 
 /*-----------------*/
 /*     FOOTER      */
@@ -399,6 +431,19 @@ footer span {
 
     .skills {
         max-width: 18rem;
+    }
+
+    img.screenshot {
+        /*max-width:45vw ;*/
+        max-height: 350px;
+    }
+    .container-project {
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    .card-project {
+        min-width: min-content;
+        max-width: 400px;
     }
 
     /*-------MENU BURGER-------*/
