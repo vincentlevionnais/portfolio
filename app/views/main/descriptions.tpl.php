@@ -3,7 +3,7 @@
 
     <div class="container container-portrait">
         <div class="portrait">
-            <img src="./assets/pictures/identity/portrait-vincent-levionnais.jpg" alt="Portrait photo de Vincent Levionnais">
+            <img src="./<?= $person[0]->getPicture();?>" alt="<?= $person[0]->getAlternative();?>">
         </div>
     </div>
 

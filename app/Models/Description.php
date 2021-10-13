@@ -7,31 +7,16 @@ use PDO;
 
 class Description
 {
-
     private $id;
     private $title;
     private $body;
-
-    public static function find($id)
-    {
-        $pdo = Database::getPDO();
-
-        $sql = '
-            SELECT * FROM `description`
-            WHERE `id` = ' . $id;
-        ;
-        $pdostatement = $pdo->query($sql);
-        $description = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
-        return $description;
-    }
 
     public static function findAll()
     {
         $pdo = Database::getPDO();
 
-        $sql = '
-            SELECT * FROM `description`
-        ';
+        $sql = 'SELECT * FROM `description`';
+
         $pdostatement = $pdo->query($sql);
         $descriptions = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $descriptions;

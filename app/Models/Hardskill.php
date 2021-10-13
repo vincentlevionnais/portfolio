@@ -10,7 +10,7 @@ class Hardskill
     private $id;
     private $name;
     private $picture;
-    private $alternativetext;
+    private $alternative;
 
     public static function find($id)
     {
@@ -19,6 +19,7 @@ class Hardskill
         $sql = '
             SELECT * FROM `hardskill`
             WHERE `id` = ' . $id;;
+            
         $pdostatement = $pdo->query($sql);
         $hardskill = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $hardskill;
@@ -28,9 +29,8 @@ class Hardskill
     {
         $pdo = Database::getPDO();
 
-        $sql = '
-            SELECT * FROM `hardskill`
-        ';
+        $sql = 'SELECT * FROM `hardskill`';
+
         $pdostatement = $pdo->query($sql);
         $hardskills = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $hardskills;
@@ -62,10 +62,10 @@ class Hardskill
     }
 
     /**
-     * Get the value of alternativetext
+     * Get the value of alternative
      */
-    public function getAlternativetext()
+    public function getAlternative()
     {
-        return $this->alternativetext;
+        return $this->alternative;
     }
 }

@@ -6,7 +6,7 @@
         <div class="card card-project">
             <h2><?= $project->getTitle() ?></h2>
             <p><?= $project->getBody() ?></p>
-            <img class="screenshot" src="./<?= $project->getScreenshot()?>" alt="<?= $project->getAlternativetext() ?>">
+            <img class="screenshot" src="./<?= $project->getScreenshot()?>" alt="<?= $project->getAlternative() ?>">
             <p class="caption"><?= $project->getCaption() ?></p>
 
         </div>

@@ -11,14 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
-
-    <link rel="icon" href="./assets/pictures/logo-vl.svg" />
+    <link rel="icon" href="./assets/pictures/logo-vl.svg"/>
     <title>Portfolio - Vincent Levionnais</title>
 </head>
 
 <body>
     <div class="wrapper">
-
 
         <?php {
             include __DIR__ . '/../partials/nav.tpl.php';

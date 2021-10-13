@@ -51,20 +51,12 @@ $router->map(
     'main-descriptions'
 );
 
-// Notre route pour la page réalisation
+// Notre route pour la page project
 $router->map(
     'GET',
     '/realisations',
     'MainController::projects',
     'main-projects'
-);
-
-// Notre route dynamique pour les pages
-$router->map(
-    'GET',
-    '/page/[i:id]',
-    'MainController::page',
-    'main-page'
 );
 
 $match = $router->match();

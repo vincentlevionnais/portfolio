@@ -6,23 +6,28 @@ use portfolio\Models\Description;
 use portfolio\Models\Project;
 use portfolio\Models\Hardskill;
 use portfolio\Models\Softskill;
+use portfolio\Models\Person;
 
 class MainController extends CoreController
 {
     public function home()
     {
+        $person = Person::findOneById();
 
+        $viewVars = ['person' => $person];
 
-        $this->show('main/home');
+        $this->show('main/home', $viewVars);
         
     }
 
     public function descriptions()
     {
         $descriptions = Description::findAll();
+        $person = Person::findOneById();
 
         $viewVars = [
              'descriptions' => $descriptions,
+             'person' => $person,
         ];
 
         $this->show('main/descriptions', $viewVars);
@@ -60,8 +65,4 @@ class MainController extends CoreController
 
     }
 
-    public function page($pageNumber)
-    {
-        echo "je suis dans la méthode page et j'ai reçu {$pageNumber}";
-    }
 }

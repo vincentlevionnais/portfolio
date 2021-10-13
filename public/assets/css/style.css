@@ -27,7 +27,7 @@
     /* body background ...*/
     --bg-color: rgb(30, 31, 53);
     /* card background ... */
-    --card-bg-color: rgb(49, 58, 133);
+    --card-bg-color: rgb(33, 42, 77);
     /* h1, li*/
     --heading-color: rgb(117, 161, 255);
 }
@@ -250,7 +250,7 @@ a:visited {
     min-width: auto;
 }
 
-.card-project span {
+.card-project span, .card-home span {
     white-space: pre-line;
 }
 
@@ -258,9 +258,10 @@ img.screenshot {
     max-width:80vw ;
     max-height: 350px;
     display: block;
-    padding : 1.5rem 0 0.5rem 0;
+    padding: 3rem 0 1.5rem 0;
     margin-left: auto;
     margin-right: auto;
+    filter: drop-shadow(0.2rem 0.3rem 0.15rem var(--heading-color));
 }
 
 p.caption {
