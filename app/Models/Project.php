@@ -33,9 +33,8 @@ class Project
     {
         $pdo = Database::getPDO();
 
-        $sql = '
-            SELECT * FROM `project`
-        ';
+        $sql = 'SELECT * FROM `project` ORDER BY `order`ASC';
+        
         $pdostatement = $pdo->query($sql);
         $projects = $pdostatement->fetchAll(PDO::FETCH_CLASS, self::class);
         return $projects;
