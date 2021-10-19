@@ -3,9 +3,8 @@
     <a href="<?= $router->generate('main-home'); ?>">
         <div class="navbar-brand">
             <img id="navbar-brand-logo" src="./assets/pictures/logo-vl.svg" alt="Logo VL">
-            <p><span>Vincent Levionnais</span><br>
-                Développeur Web Junior</p>
-
+            <h1><span>Vincent Levionnais</span><br>
+                Développeur Web Junior</h1>
         </div>
     </a>
 

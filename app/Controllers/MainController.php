@@ -61,7 +61,11 @@ class MainController extends CoreController
 
     public function contact()
     {
-        $this->show('main/contact');
+        $person = Person::findOneById();
+
+        $viewVars = ['person' => $person];
+
+        $this->show('main/contact', $viewVars);
 
     }
 

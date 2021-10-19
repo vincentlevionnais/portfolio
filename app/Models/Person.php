@@ -11,6 +11,9 @@ class Person {
     private $picture;
     private $alternative;
     private $message;
+    private $mail;
+    private $linkedin;
+    private $github;
 
     public static function findOneById()
     {
@@ -56,4 +59,28 @@ class Person {
         return $this->message;
     }
 
+
+    /**
+     * Get the value of mail
+     */ 
+    public function getMail()
+    {
+        return $this->mail;
+    }
+
+    /**
+     * Get the value of linkedin
+     */ 
+    public function getLinkedin()
+    {
+        return $this->linkedin;
+    }
+
+    /**
+     * Get the value of github
+     */ 
+    public function getGithub()
+    {
+        return $this->github;
+    }
 }

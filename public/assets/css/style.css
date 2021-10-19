@@ -1,37 +1,52 @@
 :root {
     /* header, footer, menu-burger ... */
-    --primary-color: #fff;
+    --primary-color: rgb(255, 255, 255);
     /* hover on menu ...*/
-    --secondary-color: #f4f4f4;
+    --secondary-color: rgb(244, 244, 244);
     /* p */
-    --third-color: black;
+    --third-color: rgb(0, 0, 0);
     /* shadow on header, menu ...*/
-    --shadow-color: rgba(56, 74, 104, 0.7);
+    --shadow-color: rgba(56, 74, 104, 0.4);
     /* body background ...*/
-    --bg-color: #b8bdc2;
+    --bg-color: rgb(184, 189, 194);
     /* card background ... */
-    --card-bg-color: rgb(36, 48, 70);
+    --card-bg-color: rgb(255, 255, 255);
     /* h1, li*/
-    --heading-color: black;
+    --heading-color: rgb(0, 0, 0);
+    /* a:link */
+    --link-color: blue;
+    /* a:visited */
+    --visited-color: purple;
+    /* contact-list */
+    --contact-list-bg-color: rgba(255, 255, 255, 0.5);
+    --contact-list-hover: rgb(184, 189, 194);
+    --contact-list-li: rgb(56, 74, 104);
 }
 
 [data-theme="dark"] {
     /* header, footer, menu-burger ... */
     --primary-color: rgb(12, 0, 36);
     /* hover on menu ...*/
-    --secondary-color: #34248b;
+    --secondary-color: rgb(52, 36, 139);
     /* p */
-    --third-color: black;
+    --third-color: rgb(255, 255, 255);
     /* shadow on header, menu ...*/
-    --shadow-color: rgba(136, 14, 207, 0.726);
+    --shadow-color: rgba(136, 14, 207, 0.7);
     /* body background ...*/
     --bg-color: rgb(30, 31, 53);
     /* card background ... */
     --card-bg-color: rgb(33, 42, 77);
     /* h1, li*/
     --heading-color: rgb(117, 161, 255);
+    /* a:link */
+    --link-color: rgb(126, 214, 255);
+    /* a:visited */
+    --visited-color: rgb(73, 131, 255);
+    /* contact-list */
+    --contact-list-bg-color: rgba(33, 42, 77, 0.8);
+    --contact-list-hover: rgb(136, 14, 207);
+    --contact-list-li: rgb(156, 103, 255);
 }
-
 
 html {
     height: 100%;
@@ -41,48 +56,51 @@ body {
     background-color: var(--bg-color);
     position: relative;
     height: 100%;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 300;
 }
 
 .wrapper {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-weight: 300;
-    line-height: 1.5rem;
     position: relative;
     min-height: 100%;
 }
 
+nav,
+h2,
+footer {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
 main {
+    font-family: 'Roboto', sans-serif;
     padding: 1rem 1rem 1rem 1rem;
     align-self: center;
     justify-content: center;
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
 }
 
-h1 {
+h2 {
     font-weight: 600;
-    font-size: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 8rem;
     text-align: center;
     color: var(--heading-color);
 }
 
-h2 {
+h3 {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
 a:link {
-    color: rgb(159, 225, 255);
+    color: var(--link-color);
 }
 
 a:visited {
-    color: rgb(125, 166, 255);
+    color: var(--visited-color);
 }
-
-
 
 /*-----------------*/
 /*     NAVBAR      */
@@ -298,18 +316,56 @@ input:checked+.slider:before {
 /*------------------------*/
 
 .container {
-    align-items: flex-start;
     align-content: center;
+    align-items: stretch;
 }
 
 .card {
     padding: 2rem 2rem 2rem 2rem;
-    border-radius: 1rem;
+    border-radius: 0 2rem 0 2rem;
     background-color: var(--card-bg-color);
-    color: white;
-    margin-bottom: 0.5rem;
+    color: var(--third-color);
+    margin-bottom: 1rem;
     filter: drop-shadow(0.2rem 0.3rem 0.15rem var(--shadow-color));
     transition-duration: 0.5s;
+    border-top: 0.4rem black solid;
+}
+
+.map {
+    border-radius: 0 2rem 0 2rem;
+    width: 100%;
+    height: 50vh;
+    right: auto;
+    z-index: 1;
+    margin-bottom: -0.5rem;
+}
+
+.contact-list {
+    float: right;
+    position: relative;
+    border-radius: 0 2rem 0 2rem;
+    margin-left: -40rem;
+    margin-right: auto;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 2;
+    padding: 1rem;
+    font-weight: 400;
+    color: black;
+    background-color: var(--contact-list-bg-color);
+}
+
+.contact-list li {
+    color: var(--contact-list-li);
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.contact-list li.link:hover ,
+.card-project a:hover {
+    text-shadow: 0.08rem 0.08rem var(--contact-list-hover);
 }
 
 .card-project {
@@ -340,8 +396,8 @@ p.caption {
 }
 
 .card:hover {
-    filter: drop-shadow(0.4rem 0.5rem 0 var(--primary-color));
-    transition-duration: 0.1s;
+    filter: drop-shadow(0.3rem 0.4rem 0.4rem var(--shadow-color));
+    transition-duration: 0.5s;
 }
 
 .description {
@@ -352,17 +408,17 @@ p.caption {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 0 2rem 0;
-    filter: drop-shadow(0.6rem 0.8rem 0 rgb(255, 255, 255));
+    padding-top: 2rem;
+    filter: drop-shadow(0.3rem 0.4rem 0 rgb(255, 255, 255));
 }
 
 .big-logo img {
-    width: 30rem;
+    width: 15rem;
     transition-duration: 1s;
 }
 
 .big-logo img:hover {
-    width: 30.5rem;
+    width: 15.5rem;
     margin: -0.25rem;
     transition-duration: 1s;
 
@@ -443,7 +499,7 @@ footer span {
 @media screen and (min-width: 768px) {
 
     main {
-        padding-bottom: 5rem;
+        padding-bottom: 8rem;
     }
 
     .container {
@@ -455,16 +511,16 @@ footer span {
 
     .container-description .container {
         flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 15rem;
+        margin-right: 4rem;
     }
 
-    .portrait {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        margin-right: 8rem;
-        margin-left: 5rem;
-
+    .container-description .container-portrait {
+        position: fixed;
+        align-items: flex-start;
+        margin-right: 62vw;
+        margin-top: 3rem;
     }
 
     .card {
@@ -483,18 +539,18 @@ footer span {
     }
 
     .description {
-        max-width: 25rem;
+        width: 18rem;
     }
 
     .container .card.description:not(:nth-of-type(2)) {
-        margin-left: -25%;
-        margin-right: 25%;
+        margin-left: -5rem;
+        margin-right: 5rem;
     }
 
     .container-description {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: right;
     }
 
     .skills {
@@ -504,7 +560,7 @@ footer span {
     img.screenshot {
         max-height: 300px;
     }
-    
+
     .container-project {
         flex-wrap: wrap;
         align-items: stretch;
@@ -513,6 +569,11 @@ footer span {
     .card-project,
     .card-home {
         max-width: 30rem;
+    }
+    
+    iframe.map {
+        width: 60vw;
+        height: 50vh;
     }
 
     /*-------MENU BURGER-------*/
@@ -543,4 +604,33 @@ footer span {
         justify-content: space-evenly;
     }
 
+    .container-description .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 55vw; 
+        margin-left: 50vw;
+        margin-right: 10vw;
+    }
+
+    .container-description .container-portrait {
+        float : left;
+        margin-right: 60vw;
+    }
+
+    .card.description{
+
+        width:100%;
+    }
+
+    .contact-list {
+        width: 45%;
+        padding: 2rem;
+        font: 2rem;
+        line-height: 4rem;
+    }
+
+    .contact-list li {
+        line-height: 2.5rem;
+        
+    }
 }
