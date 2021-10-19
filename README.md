@@ -8,4 +8,3 @@ J'ai réalisé mon site portfolio de zéro comme ceci :
 - Réalisation du CSS sans framework :art:, en mobile-first et responsive  
 - Ajout d'une fonctionnalité de changement de thème en JavaScript  
 - Intégration d'une carte personnalisée sur la page contact  
-
