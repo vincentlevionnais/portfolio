@@ -18,7 +18,7 @@
                     } ?>"><a href="<?= $router->generate('main-home'); ?>">Accueil</a></li>
         <li class="<?php if ($viewName == 'main/descriptions') {
                         echo 'active';
-                    } ?>"><a href="<?= $router->generate('main-descriptions'); ?>">Qui suis-je</a></li>
+                    } ?>"><a href="<?= $router->generate('main-descriptions'); ?>">Qui suis-je ?</a></li>
         <li class="<?php if ($viewName == 'main/skills') {
                         echo 'active';
                     } ?>"><a href="<?= $router->generate('main-skills'); ?>">Compétences</a></li>
