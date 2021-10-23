@@ -59,6 +59,14 @@ $router->map(
     'main-projects'
 );
 
+// Notre route pour la page 404
+$router->map(
+    'GET',
+    '/404',
+    'MainController::404',
+    'main-err404'
+);
+
 $match = $router->match();
 
 $dispatcher = new Dispatcher($match, 'portfolio\Controllers\ErrorController::err404');
