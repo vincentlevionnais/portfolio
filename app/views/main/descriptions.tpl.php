@@ -4,6 +4,9 @@
     <div class="container container-portrait">
         <div class="portrait">
             <img src="./<?= $person[0]->getPicture();?>" alt="<?= $person[0]->getAlternative();?>">
+            <a id="btn-cv" href="./assets/files/CV-Vincent-LEVIONNAIS.pdf">
+                <p><i class="fa fa-file-pdf"></i><br>Mon CV</p>
+            </a>
         </div>
     </div>
 
