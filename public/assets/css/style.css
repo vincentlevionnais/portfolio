@@ -25,19 +25,19 @@
 
 [data-theme="dark"] {
     /* header, footer, menu-burger ... */
-    --primary-color: rgb(12, 0, 36);
+    --primary-color: rgb(3, 4, 46);
     /* hover on menu ...*/
-    --secondary-color: rgb(52, 36, 139);
+    --secondary-color: rgb(16, 21, 83);
     /* p */
     --third-color: rgb(255, 255, 255);
     /* shadow on header, menu ...*/
-    --shadow-color: rgba(136, 14, 207, 0.7);
+    --shadow-color: rgb(152, 14, 207);
     /* body background ...*/
-    --bg-color: rgb(30, 31, 53);
+    --bg-color: rgb(8, 11, 63);
     /* card background ... */
-    --card-bg-color: rgb(33, 42, 77);
+    --card-bg-color: rgb(25, 32, 75);
     /* h1, li*/
-    --heading-color: rgb(117, 161, 255);
+    --heading-color: rgb(115, 192, 255);
     /* a:link */
     --link-color: rgb(126, 214, 255);
     /* a:visited */
@@ -133,14 +133,14 @@ a:visited {
     display: flex;
     float: left;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--third-color);
     padding: 0.5rem;
 }
 
 .navbar-brand span {
-    font-size: 1.89rem;
-    line-height: initial;
+    font-size: 2rem;
+    line-height: 2rem;
     font-weight: 400;
     text-transform: uppercase;
 

@@ -4,7 +4,7 @@
         <div class="navbar-brand">
             <img id="navbar-brand-logo" src="./assets/pictures/logo-vl.svg" alt="Logo VL">
             <h1><span>Vincent Levionnais</span><br>
-                Développeur Web Junior</h1>
+                      Développeur Web</h1>
         </div>
     </a>
 
